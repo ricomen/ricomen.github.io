@@ -1,0 +1,11 @@
+node_modules
+tmp
+Thumbs.db
+.DS_Store
+.idea
+*.log
+*.psd
+*.ai
+*.bat
+*.js
+*.json
