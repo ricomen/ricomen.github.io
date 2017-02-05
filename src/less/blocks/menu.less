@@ -1,0 +1,40 @@
+.menu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .col();
+    .col-xs-12();
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 100;
+    .row-flex();
+    .justify-content(space-around);
+  }
+  &__item {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  &__link {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: #000;
+      transition: 0.2s ease-in-out;
+      transform: rotate(-360deg);
+      }
+    &:hover::after {
+      width: 100%;
+      transform: rotate(0deg);
+    }
+  }
+}
