@@ -1,4 +1,10 @@
 .container {
   .center();
-  max-width: 1200px;  
+  max-width: 1200px;
+  @media @tablet {
+    max-width: 960px;
+  }
+  @media @phone {
+    max-width: 576px;
+  }
 }

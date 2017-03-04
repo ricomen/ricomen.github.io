@@ -476,6 +476,16 @@ template {
   margin-right: auto;
   margin-left: auto;
 }
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 576px;
+  }
+}
 .menu {
   position: relative;
 
@@ -532,22 +542,42 @@ template {
 .project {
   display: inline-block;
 
-  width: 33.3333%;
+  width: 31.1%;
+  margin: 1%;
 
   transition: .2s ease-out;
+  text-align: center;
   vertical-align: top;
+
+  background-color: red;
+}
+@media (max-width: 992px) {
+  .project {
+    width: 48%;
+  }
+}
+@media (max-width: 767px) {
+  .project {
+    width: 100%;
+    margin: 1% 0;
+  }
 }
 .project:hover {
-  z-index: 5;
-
   transform: scale(1.1);
 
   box-shadow: 0 0 50px #000;
 }
+@media (max-width: 767px) {
+  .project:hover {
+    width: 100%;
+
+    transform: none;
+
+    box-shadow: none;
+  }
+}
 .project__img {
   margin: 0;
-
-  background-color: yellow;
 }
 .project__img img {
   max-width: 100%;

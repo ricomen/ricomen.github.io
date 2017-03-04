@@ -3,19 +3,31 @@
 }
 
 .project {
+  text-align: center;
   display: inline-block;
   vertical-align: top; 
-  width: 33.3333%;
+  background-color: red;
+  width: 31.1%;
+  margin: 1%;
   transition: 0.2s ease-out;
+  @media @tablet {
+    width: 48%;
+  }
+  @media @phone {
+    width: 100%;
+    margin: 1% 0;
+  }
   &:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 50px #000;
-    z-index: 5;
-  }
-  
+    box-shadow: 0px 0px 50px #000;    
+    @media @phone {
+      transform: none;
+      box-shadow: none;
+      width: 100%;
+    }
+  }  
   &__img {
-    margin: 0;
-    background-color: yellow;
+    margin: 0;    
     img {      
       max-width: 100%;
       height: auto;
