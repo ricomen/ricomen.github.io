@@ -472,65 +472,28 @@ template {
   src: url("../fonts/San Francisco/sfuidisplay-thin-webfont.woff") format("woff"), url("../fonts/San Francisco/sfuidisplay-thin-webfont.woff2") format("woff2");
 }
 .container {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-@media screen and (max-width: 1200px) {
-  .container {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .container {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .container {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .menu {
-  box-sizing: border-box;
-  margin-right: 15px;
-  margin-left: 15px;
+  position: relative;
+
   padding-top: 20px;
   padding-bottom: 20px;
-
-  word-wrap: break-word;
-}
-@media screen and (max-width: 576px) {
-  .menu {
-    width: calc(100% - 30px);
-  }
 }
 .menu__list {
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 300;
 
   display: -ms-flexbox;
   display: flex;
 
   margin: 0;
-  margin-right: -15px;
-  margin-left: -15px;
   padding: 0;
 
   list-style: none;
 
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
@@ -547,22 +510,58 @@ template {
 }
 .menu__link::after {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -2px;
+  left: 50%;
 
   width: 0;
   height: 1px;
 
   content: "";
-  transition: .2s ease-in-out;
-  transform: rotate(-360deg);
+  transition: .1s ease-in-out;
 
   background-color: #000;
 }
 .menu__link:hover::after {
-  width: 100%;
+  left: 0;
 
-  transform: rotate(0deg);
+  width: 100%;
+}
+.catalog {
+  font-size: 0;
+}
+.project {
+  display: inline-block;
+
+  width: 33.3333%;
+
+  transition: .2s ease-out;
+  vertical-align: top;
+}
+.project:hover {
+  z-index: 5;
+
+  transform: scale(1.1);
+
+  box-shadow: 0 0 50px #000;
+}
+.project__img {
+  margin: 0;
+
+  background-color: yellow;
+}
+.project__img img {
+  max-width: 100%;
+  height: auto;
+}
+.project__img figcaption {
+  font-size: 16px;
+
+  text-align: center;
+}
+.project time {
+  font-size: 18px;
+
+  background-color: green;
 }
 .index-content {
   text-align: center;
@@ -587,10 +586,6 @@ body {
 
   color: #000;
   background-color: #f3f3f3;
-}
-.scills__icon {
-  width: 20px;
-  height: 45px;
 }
 .scills__icon {
   width: 40px;
