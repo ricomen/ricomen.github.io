@@ -11,114 +11,134 @@
     <meta name="author" content="Timur Khamitov">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="showContacts()">
   <header class="page-header">
     <div class="container">
     <nav class="menu">
       <ul class="menu__list">
-        <li class="menu__item"><a href="about.html" class="menu__link  menu__link--active">Обо мне</a></li>
+        <li class="menu__item"><a href="about.html" class="menu__link">Обо мне</a></li>
         <li class="menu__item"><a href="portfolio.html" class="menu__link">Портфолио</a></li>
-        <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+        <li class="menu__item">Контакты
+          <ul class="menu__submenu">
+            <li><span>Тел.: </span><a href="tel:+79177698940" class="contacts__link">+7 (917) 769-89-40</a></li>
+            <li><span>E-mail: </span><a href="mailto:ricomen@mail.ru" class="contacts__link">ricomen@mail.ru</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
     </div>
   </header>
   <main class="page-main">
     <div class="container">
-      <section class="about">
+      <section class="about">      
         <figure class="about__photo">
-          <img src="" alt="">
+          <img src="img/photo.jpg" srcset="img/photo@2x.jpg 2x," width="400" height="500" alt="It's me">                  
         </figure>
         <div class="about__content">
           <h1 class="about__title">Хамитов Тимур</h1>
           <p class="about__text">HTML Верстальщик</p>
-          <h2 class="about__sub-title">Cпециализация:</h2>
-          <p class="about__text">вёрстка различных проектов, от крупных сервисов до посадочных страниц и электронных писем.</p>
-          <h2 class="about__sub-title">Ключевые навыки:</h2>
-        </div>
-      <div class="scills">
-        <div class="skills__list">
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#gulp-icon" />
-            </svg>
+          <h2 class="about__subtitle">Cпециализация:</h2>
+          <p class="about__text">Вёрстка различных проектов(фиксированная, резиновая, адаптивная), от крупных сервисов до посадочных страниц.</p>
+          <div class="scills">
+            <h2 class="about__subtitle">Ключевые навыки:</h2>
+            <div class="scills__list">
+              <div class="scills__item" title="Gulp">
+                <svg class="scills__icon">
+                  <use xlink:href="#gulp-icon" />
+                </svg>
+              </div>
+              <div class="scills__item" title="HTML-5">
+                <svg class="scills__icon">
+                  <use xlink:href="#html-icon" />
+                </svg>
+              </div>
+              <div class="scills__item" title="CSS-3">
+                <svg class="scills__icon">
+                  <use xlink:href="#css-3-icon" />
+                </svg>
+              </div>
+              <div class="scills__item" title="Java Script">
+                <svg class="scills__icon">
+                  <use xlink:href="#javascript-icon" />
+                </svg>
+              </div>
+              <div class="scills__item" title="Система контроля версий - Git">
+                <svg class="scills__icon">
+                  <use xlink:href="#git-icon" />
+                </svg>
+              </div>
+              <div class="scills__item" title="методология - БЭМ (на уровне именования селекторов)">
+                <svg class="scills__icon">
+                  <use xlink:href="#bem-icon" />
+                </svg>
+              </div>
+              <div class="scills__item" title="препроцессор LESS">
+                <svg class="scills__icon">
+                  <use xlink:href="#less-icon" />
+                </svg>
+              </div>
+              <!--<div class="scills__item">
+      <svg class="scills__icon">
+        <use xlink:href="#sass-icon" />
+      </svg>
+              </div> -->
+              <div class="scills__item" title="SVG">
+                <svg class="scills__icon">
+                  <use xlink:href="#svg-icon" />
+                </svg>
+              </div>
+              <div class="scills__item" title="Photoshop">
+                <svg class="scills__icon">
+                  <use xlink:href="#photoshop-icon" />
+                </svg>
+              </div>
+              <!--<div class="scills__item">
+                <svg class="scills__icon">
+                  <use xlink:href="#bootstrap-icon" />
+                </svg>
+              </div> -->
+              <div class="scills__item" title="Шаблонизатор PUG(Jade)">
+                <svg class="scills__icon">
+                  <use xlink:href="#pug-icon" />
+                </svg>
+              </div>
+            </div>
           </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#html-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#css-3-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#javascript-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#git-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#bem-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#less-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#sass-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#svg-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#photoshop-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#bootstrap-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#pug-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#smartphone-icon" />
-            </svg>
-          </div>
-          <div class="scills__item">
-            <svg class="scills__icon">
-              <use xlink:href="#email-icon" />
-            </svg>
-          </div>
-        </div>
-      </div>
+            <div class="contacts" >
+              <h2 class="contacts__title" id="contacts">Контакты:</h2>
+              <a href="tel:+79177698940" class="contacts__link">Тел.:+7(917)769-89-40</a>
+              <a href="mailto:ricomen@mail.ru" class="contacts__link">E-mail: ricomen@mail.ru</a>
+            </div>
+        </div>      
       </section>
     </div>
   </main>
   <footer class="page-footer">
-    <section class="social">
-      <a href="" class="social__link">
-      </a>
-    </section>
+    <div class="container">
+      <section class="social">
+        <a href="http://www.vk.com/ricomen" class="social__link">
+         <svg width="30" height="30" >
+            <use xlink:href="#vk-icon" />
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/timur.khamitov.1" class="social__link">
+         <svg width="30" height="30" >
+            <use xlink:href="#facebook-icon" />
+          </svg>
+        </a>
+        <a href="https://github.com/ricomen" class="social__link">
+         <svg width="30" height="30" >
+            <use xlink:href="#git-icon" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/ricomens/" class="social__link">
+         <svg width="30" height="30" >
+            <use xlink:href="#inst-icon" />
+          </svg>
+        </a>
+      </section>
+    </div>
   </footer>
   <script src="js/svg.js"></script>
-</body>
+  </body>
 </html>

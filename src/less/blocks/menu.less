@@ -1,8 +1,7 @@
-.menu {
-  position: relative;
+.menu {  
   padding-top: 20px;
   padding-bottom: 20px;
-  &__list {
+  &__list {    
     margin: 0;
     padding: 0;
     list-style: none;
@@ -10,6 +9,7 @@
     font-weight: 300;
   }
   &__item {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     font-size: 18px;
@@ -34,5 +34,29 @@
       left: 0;      
       width: 100%;
     }
+  }
+  &__submenu {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    background: #eee;
+    border-radius: 3px;
+    box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.25);
+    transform: scaleY(0);
+    transition: 0.5s;
+    opacity: 0;    
+    li {
+      padding: 5px 0;
+      white-space: nowrap;
+    }
+  }
+  &__item:hover &__submenu {
+    visibility: visible;
+    transform: scaleY(1);
+    opacity: 1;
+    
   }
 }
