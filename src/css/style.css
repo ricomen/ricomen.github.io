@@ -607,7 +607,7 @@ template {
 }
 @media (max-width: 767px) {
   .project {
-    width: 400px;
+    width: 100%;
     margin: 0 1% 5% 0;
   }
 }
