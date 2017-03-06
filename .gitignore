@@ -7,5 +7,5 @@ Thumbs.db
 *.psd
 *.ai
 *.bat
-*.js
+gulpfile.js
 *.json
