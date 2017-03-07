@@ -1,18 +1,20 @@
-.projects { 
-  font-size: 0; 
+.projects {
+  font-size: 0;
   &__title {
+    display: none;
     font-size: 18px;
     line-height: 1.1;
-    font-weight: 400;
+    font-weight: 300;
+      @media @phone {
+      display: block;
+      margin-top: 50px;
+    }
   }
-
   @media @phone {
     text-align: center;
-    padding-top: 50px;
   }
 }
-.project {
-  margin-top: 40px;
+.project {  
   text-align: center;
   display: inline-block;
   vertical-align: top;
