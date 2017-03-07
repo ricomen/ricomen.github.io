@@ -471,9 +471,6 @@ template {
 
   src: url("../fonts/San Francisco/sfuidisplay-thin-webfont.woff") format("woff"), url("../fonts/San Francisco/sfuidisplay-thin-webfont.woff2") format("woff2");
 }
-.page-header {
-  padding: 0 2%;
-}
 @media (max-width: 992px) {
   .page-header {
     text-align: center;
@@ -483,6 +480,7 @@ template {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 2%;
 }
 @media (max-width: 992px) {
   .container {
@@ -495,86 +493,140 @@ template {
     padding: 0 3%;
   }
 }
-.menu {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.menu__list {
-  font-size: 18px;
-  font-weight: 300;
+@media (max-width: 767px) {
+  .main-nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
 
+    width: 100%;
+
+    text-align: center;
+  }
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
+}
+.main-nav__list {
   margin: 0;
-  padding: 0;
+  padding: 25px 0;
 
   list-style: none;
 }
-.menu__item {
-  font-size: 18px;
-  line-height: 1.3;
-
-  position: relative;
-
+@media (max-width: 767px) {
+  .main-nav__list {
+    background-color: #fff;
+  }
+}
+.main-nav__item {
   display: inline-block;
 
-  margin-right: 20px;
+  margin-right: 38px;
 
-  vertical-align: middle;
+  vertical-align: top;
+  text-transform: uppercase;
 }
-.menu__link {
-  position: relative;
+.main-nav__item--contacts {
+  text-transform: none;
+}
+@media (max-width: 767px) {
+  .main-nav__item {
+    display: block;
 
+    margin-right: 0;
+    padding: 10px 0;
+  }
+}
+.main-nav__item:last-child {
+  margin-right: 0;
+}
+.main-nav__link {
   text-decoration: none;
 
   color: #000;
 }
-.menu__link::after {
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
+.main-nav__link:hover {
+  text-decoration: underline;
+}
+.main-nav__link--active {
+  text-decoration: underline;
+}
+.main-nav__toggle {
+  font-size: 28px;
+  line-height: 40px;
 
-  width: 0;
-  height: 1px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+
+  border: 2px solid #000;
+  border-radius: 3px;
+}
+.main-nav__toggle::before,
+.main-nav__toggle::after {
+  position: absolute;
+  right: 5px;
+  left: 5px;
+
+  height: 3px;
 
   content: "";
-  transition: .1s ease-in-out;
+  transition: .25s ease-in;
 
   background-color: #000;
 }
-.menu__link:hover::after {
-  left: 0;
+.main-nav__toggle::before {
+  top: 10px;
 
-  width: 100%;
+  box-shadow: 0 8px #000;
 }
-.menu__submenu {
-  position: absolute;
-  left: 0;
-
-  visibility: hidden;
-
-  margin: 0;
-  padding: 10px;
-
-  list-style: none;
-
-  transition: .5s;
-  transform: scaleY(0);
-
-  opacity: 0;
-  border-radius: 3px;
-  background: #eee;
-  box-shadow: 0 5px 20px 2px rgba(0, 0, 0, .25);
+.main-nav__toggle::after {
+  top: 26px;
 }
-.menu__submenu li {
-  padding: 5px 0;
+.main-nav__toggle--close::before,
+.main-nav__toggle--close::after {
+  top: 19px;
+  right: 5px;
+  left: 5px;
 
-  white-space: nowrap;
+  height: 3px;
 }
-.menu__item:hover .menu__submenu {
-  visibility: visible;
+.main-nav__toggle--close::before {
+  transform: rotate(45deg);
 
-  transform: scaleY(1);
-
-  opacity: 1;
+  box-shadow: 0 0 #fff;
+}
+.main-nav__toggle--close::after {
+  transform: rotate(-45deg);
+}
+@media (max-width: 767px) {
+  .main-nav__toggle {
+    display: block;
+  }
+}
+.no-css3 .main-nav__toggle {
+  border: none;
+  background: url("../img/icons/sprite.png") no-repeat 0 -50px;
+}
+.no-css3 .main-nav__toggle::before,
+.no-css3 .main-nav__toggle::after,
+.no-css3 .main-nav__toggle--close::before,
+.no-css3 .main-nav__toggle--close::after {
+  display: none;
+}
+.no-css3 .main-nav__toggle--close {
+  background: url("../img/icons/sprite.png") no-repeat 0 0;
 }
 .projects {
   font-size: 0;
@@ -784,13 +836,25 @@ template {
 
   letter-spacing: 10px;
 }
+@media (max-width: 767px) {
+  .index-content__title {
+    font-size: 50px;
+  }
+}
 .index-content__text {
   font-size: 18px;
   line-height: 1.3;
 }
+@media (max-width: 767px) {
+  .index-content__text {
+    font-size: 14px;
+  }
+}
 body {
   font-family: "SF D";
   font-weight: 300;
+
+  min-width: 320px;
 
   color: #000;
   background-color: #f3f3f3;
