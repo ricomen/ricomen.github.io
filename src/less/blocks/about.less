@@ -44,21 +44,36 @@
   clear: both;
   margin-bottom: 30px;
   &__list {
-    .clearfix();
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
   &__item {
-    float: left;
-    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
+    padding: 2%;    
+    text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 1%;
-    svg {
+    width: 40%;
+    align-content: center; 
+
+    @media @phone {
+      width: 26%;
+    }
+    svg {      
+      vertical-align: middle;
       width: 40px;
-      height: 40px;
+      height: 40px;      
     }
     &:hover {
       box-shadow: 0 0 10px 2px #ccc;
     }
+  }
+  &__description {
+    margin-top: 10%;
+    margin-bottom: 0;
   }
 }
 .contacts {
@@ -69,8 +84,7 @@
     font-size: 24px;
     font-weight: 300;
   }
-  &__link {
-    
+  &__link {    
     padding: 1%;
     text-decoration: none;
     color: #000;

@@ -810,31 +810,47 @@ template {
 
   margin-bottom: 30px;
 }
-.scills__list:before,
-.scills__list:after {
-  display: table;
+.scills__list {
+  margin: 0;
+  padding: 0;
 
-  content: "";
-}
-.scills__list:after {
-  clear: both;
+  list-style: none;
 }
 .scills__item {
-  float: left;
+  display: inline-block;
 
+  width: 40%;
   margin: 1%;
-  padding: 10px;
+  padding: 2%;
+
+  text-align: center;
+  vertical-align: top;
 
   border: 1px solid #ccc;
   border-radius: 5px;
+
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+          align-content: center;
+}
+@media (max-width: 767px) {
+  .scills__item {
+    width: 26%;
+  }
 }
 .scills__item svg {
   width: 40px;
   height: 40px;
+
+  vertical-align: middle;
 }
 .scills__item:hover {
   -webkit-box-shadow: 0 0 10px 2px #ccc;
           box-shadow: 0 0 10px 2px #ccc;
+}
+.scills__description {
+  margin-top: 10%;
+  margin-bottom: 0;
 }
 .contacts__title {
   font-size: 24px;
