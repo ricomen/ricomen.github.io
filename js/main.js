@@ -22,5 +22,26 @@
   }
     boxCenter();
     window.onresize = boxCenter;
+  }  
+
+  function supportCSS(prop) {
+    var yes = false;
+    if('Moz'+prop in document.body.style) {
+        yes = true;
+    }
+    if('webkit'+prop in document.body.style) {
+        yes = true;
+    }
+    if('ms'+prop in document.body.style) {
+        yes = true;
+    }
+    if(prop in document.body.style) {
+        yes = true;
+    }
+    return yes; // возращаем ответ
+  }
+
+  if(!supportCSS("transform")) {
+    document.body.classList.add("no-css3");
   }
 })();
