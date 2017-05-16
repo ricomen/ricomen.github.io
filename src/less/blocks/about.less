@@ -1,14 +1,24 @@
 .about {
   .clearfix();
   border-bottom: 1px solid #ccc;
+  padding-bottom: 40px;
   margin-top: 40px;
   margin-bottom: 40px;
-  &__photo {    
+
+  &__sidebar {
     float: left;
+    width: 35%;
+  }//sidebar
+  
+  &__photo {
     padding: 0;
     margin: 0;
-    width: 30%;
+    width: 100%;
+    max-width: 400px;
     margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.5);
     img {
       display: block;
       max-width: 100%;
@@ -17,79 +27,34 @@
     @media @phone {
       display: none;
     }
+  }//photo
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    margin: 2px;
+    color: #333;
+    font-weight: bold;
   }
-  &__content {    
+
+  &__item {
+    margin-bottom: 8px;
+  }
+
+  &__content {
     float: right;
+    padding: 20px;
     width: 65%;
+    box-sizing: border-box;    
     @media @phone {      
       width: 100%;
     }
   }  
   &__title {
     margin: 0;
+    margin-bottom: 20px;
     font-size: 26px;
     line-height: 1.1;
     font-weight: 300;
-  }
-  &__subtitle {
-    margin: 0;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 24px;
-    font-weight: 300;
-  }
-}
-
-.scills {
-  clear: both;
-  margin-bottom: 30px;
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  &__item {
-    display: inline-block;
-    vertical-align: top;
-    margin: 1%;
-    padding: 2%;    
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 40%;
-    align-content: center; 
-
-    @media @phone {
-      width: 26%;
-    }
-    svg {      
-      vertical-align: middle;
-      width: 40px;
-      height: 40px;      
-    }
-    &:hover {
-      box-shadow: 0 0 10px 2px #ccc;
-    }
-  }
-  &__description {
-    margin-top: 10%;
-    margin-bottom: 0;
-  }
-}
-.contacts {
-  &__title {
-    margin: 0;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 24px;
-    font-weight: 300;
-  }
-  &__link {    
-    padding: 1%;
-    text-decoration: none;
-    color: #000;
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
