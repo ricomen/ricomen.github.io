@@ -1,9 +1,36 @@
-.scills {
+.scills {  
+  clear: both;
+  text-align: center;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
+    padding: 2%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    @media @phone {
+      width: 26%;
+    }
+  }
+  &__description {
+    position: absolute;    
+    margin: 0;
+    top: 0;
+    left: 0;
+    border: 1px solid #000;
+    background: #ccc;    
+  }
 
   &__icon {    
     transition: 0.2s;
     &:hover {
-      fill: #49423d;
+      // fill: #49423d;
     }
   }
 }

@@ -6,6 +6,3 @@ Thumbs.db
 *.log
 *.psd
 *.ai
-*.bat
-gulpfile.js
-*.json
