@@ -8,6 +8,9 @@
   &__sidebar {
     float: left;
     width: 35%;
+    @media @phone {
+      display: none;
+    }
   }//sidebar
   
   &__photo {
@@ -24,9 +27,6 @@
       display: block;
       max-width: 100%;
       height: auto;
-    }
-    @media @phone {
-      display: none;
     }
   }//photo
 
